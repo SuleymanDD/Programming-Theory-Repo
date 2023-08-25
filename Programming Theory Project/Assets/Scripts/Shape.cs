@@ -9,6 +9,7 @@ public class Shape : MonoBehaviour
     private void Awake()
     {
         textArea = GameObject.Find("Canvas").GetComponentInChildren<TextMeshProUGUI>();
+
     }
     private void OnMouseDown()
     {
