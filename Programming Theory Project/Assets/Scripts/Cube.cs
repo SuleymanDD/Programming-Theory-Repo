@@ -8,5 +8,6 @@ public class Cube : Shape
     {
         gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
         textArea.text = "Cube";
+        StartCoroutine(ResetRoutine());
     }
 }

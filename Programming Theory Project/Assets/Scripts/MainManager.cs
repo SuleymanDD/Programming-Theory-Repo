@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
-    private UIHandler uIHandler;
     public static MainManager Instance { get; private set; }
-    public string inputName;
-    public int inputAge;
-    public bool readyToStart = false;
+    private UIHandler uIHandler;
     private Image nameFieldImage;
     private Image ageFieldImage;
+    public string inputName;
+    public int inputAge;
+    public short readyToStart;   // When value is 2, Game can start
+
+    // ENCAPSULATION
     public string InputName
     {
         get { return inputName; }
@@ -26,7 +28,7 @@ public class MainManager : MonoBehaviour
             {
                 nameFieldImage.color=Color.white;
                 inputName = value;
-                readyToStart = true;
+                readyToStart++;
             }
         }
     }
@@ -44,7 +46,7 @@ public class MainManager : MonoBehaviour
             {
                 ageFieldImage.color = Color.white;
                 inputAge = value;
-                readyToStart = true;
+                readyToStart++;
             }
         }
     }

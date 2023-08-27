@@ -8,5 +8,6 @@ public class Cylinder : Shape
     {
         gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
         textArea.text = "Cylinder";
+        StartCoroutine(ResetRoutine());
     }
 }

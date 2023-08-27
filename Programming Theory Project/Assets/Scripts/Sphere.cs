@@ -8,5 +8,6 @@ public class Sphere : Shape
     {
         gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
         textArea.text = "Sphere";
+        StartCoroutine(ResetRoutine());
     }
 }
